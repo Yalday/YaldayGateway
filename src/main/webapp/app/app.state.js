@@ -15,7 +15,12 @@
                     templateUrl: 'app/layouts/navbar/navbar.html',
                     controller: 'NavbarController',
                     controllerAs: 'vm'
-                }
+                },
+              'search@': {
+                  templateUrl: 'app/layouts/search/search.html'/*,
+                  controller: 'SearchController',
+                  controllerAs: 'vm'*/
+              }
             },
             resolve: {
                 authorize: ['Auth',
