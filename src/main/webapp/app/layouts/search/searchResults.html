@@ -1,0 +1,43 @@
+<div>
+
+    <div class="row text-center">
+        <div class="col-md-4"></div>
+        <div class="col-md-4 "><span data-translate="yaldayGatewayApp.search.home.title">Search Results</span></div>
+        <div class="col-md-4"></div>
+    </div>
+
+    <br>
+
+    <div class="row" ng-cloak>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+            <md-content class="md-padding" layout-xs="column" layout="column" layour-wrap>
+
+                <div flex-xs="" flex-gt-xs="50" layout="column" ng-repeat="merchant in vm.merchantDeets">
+
+                    <md-card  md-theme="{{ showDarkTheme ? 'dark-purple' : 'default' }}" md-theme-watch="">
+                        <md-card-title>
+                            <md-card-title-text>
+                                <span class="md-headline">{{merchant.name}}</span>
+                                <span class="md-subhead">{{merchant.address}}</span>
+                            </md-card-title-text>
+                            <md-card-title-media>
+                                <div class="md-media-sm card-media"></div>
+                            </md-card-title-media>
+                        </md-card-title>
+                        <md-card-actions layout="row" layout-align="end center">
+                            <md-button>Visit Site</md-button>
+                            <md-button>Book Now</md-button>
+                        </md-card-actions>
+                    </md-card>
+                </div>
+            </md-content>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+
+</div>
+
+
+
+
