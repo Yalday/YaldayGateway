@@ -1,6 +1,6 @@
 {
   "generator-jhipster": {
-    "jhipsterVersion": "3.9.1",
+    "jhipsterVersion": "3.11.0",
     "baseName": "YaldayGateway",
     "packageName": "com.yalday.gateway",
     "packageFolder": "com/yalday/gateway",
@@ -16,7 +16,7 @@
     "messageBroker": false,
     "serviceDiscoveryType": "eureka",
     "buildTool": "maven",
-    "enableSocialSignIn": false,
+    "enableSocialSignIn": true,
     "jwtSecretKey": "0c41a478121f051634d4a92074be0b72eb613c61",
     "useSass": true,
     "applicationType": "gateway",

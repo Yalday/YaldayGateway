@@ -27,6 +27,9 @@ public class UserService {
     private final Logger log = LoggerFactory.getLogger(UserService.class);
 
     @Inject
+    private SocialService socialService;
+
+    @Inject
     private PasswordEncoder passwordEncoder;
 
     @Inject
@@ -143,8 +146,8 @@ public class UserService {
     public void updateUser(String id, String login, String firstName, String lastName, String email,
         boolean activated, String langKey, Set<String> authorities) {
 
-        userRepository
-            .findOneById(id)
+        Optional.of(userRepository
+            .findOne(id))
             .ifPresent(u -> {
                 u.setLogin(login);
                 u.setFirstName(firstName);
@@ -164,6 +167,7 @@ public class UserService {
 
     public void deleteUser(String login) {
         userRepository.findOneByLogin(login).ifPresent(u -> {
+            socialService.deleteUserSocialConnection(u.getLogin());
             userRepository.delete(u);
             log.debug("Deleted User: {}", u);
         });
