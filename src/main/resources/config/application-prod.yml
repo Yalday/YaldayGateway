@@ -77,12 +77,9 @@ jhipster:
                 tokenValidityInSeconds: 86400
     mail: # specific JHipster mail property, for standard properties see MailProperties
         from: YaldayGateway@localhost
+        baseUrl: # keep empty to use the server's default URL
     metrics: # DropWizard Metrics configuration, used by MetricsConfiguration
         jmx.enabled: true
-        spark:
-            enabled: false
-            host: localhost
-            port: 9999
         graphite:
             enabled: false
             host: localhost

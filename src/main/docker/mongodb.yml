@@ -2,7 +2,7 @@ version: '2'
 services:
     yaldaygateway-mongodb:
         container_name: yaldaygateway-mongodb
-        image: mongo:3.3.12
+        image: mongo:3.2.10
         ports:
             - "27017:27017"
         # volumes:
