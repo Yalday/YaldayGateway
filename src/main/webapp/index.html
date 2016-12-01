@@ -14,6 +14,8 @@
     <!-- endinject -->
     <link rel="stylesheet" href="content/css/vendor.css">
     <!-- endbuild -->
+    <!-- angular material stylesheet -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
     <!-- build:css content/css/main.css -->
     <link rel="stylesheet" href="content/css/main.css">
     <!-- endbuild -->
@@ -24,15 +26,16 @@
     <![endif]-->
     <page-ribbon></page-ribbon>
     <div ui-view="navbar" ng-cloak></div>
-    <div class="container">
-        <div class="well" ui-view="content">
-            <!-- Angular views -->
-        </div>
-
-        <div class="footer" ng-cloak>
-            <p data-translate="footer">This is your footer</p>
-        </div>
+    <div class="row" ng-cloak>
+        <div class="span4"></div>
+        <div class="span4"><img class="center-block" src="content/images/mini-yalday.png" /></div>
+        <div class="span4"></div>
     </div>
+    <br>
+
+    <div class="row" ui-view="search" ng-cloak></div>
+    <div class="well" ui-view="content"></div>
+
 
     <!-- Google Analytics: uncomment and change UA-XXXXX-X to be your site's ID.
     <script>
@@ -90,6 +93,9 @@
     <script src="app/layouts/navbar/navbar.controller.js"></script>
     <script src="app/layouts/navbar/active-menu.directive.js"></script>
     <script src="app/layouts/navbar/active-link.directive.js"></script>
+    <script src="app/layouts/search/search.state.js"></script>
+    <script src="app/layouts/search/search.controller.js"></script>
+    <script src="app/layouts/search/search.service.js"></script>
     <script src="app/layouts/error/error.state.js"></script>
     <script src="app/home/home.state.js"></script>
     <script src="app/home/home.controller.js"></script>
@@ -181,6 +187,13 @@
     <script src="app/account/activate/activate.controller.js"></script>
     <script src="app/account/account.state.js"></script>
     <!-- endinject -->
+    <!-- Angular Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+    <!-- Angular Material Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
     <!-- endbuild -->
 
 </body>
