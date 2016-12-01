@@ -1,0 +1,25 @@
+{
+    "yaldayGatewayApp": {
+        "search": {
+            "home": {
+                "title": "Search Results"
+            },
+            "results": {
+                "name": "Name",
+                "description": "Description",
+                "photo": "Photo",
+                "streetAddress": "Street Address",
+                "city": "City",
+                "postcode": "Postcode"
+            },
+            "name": "Name",
+            "description": "Description",
+            "photo": "Photo",
+            "streetAddress": "Street Address",
+            "city": "City",
+            "postcode": "Postcode",
+            "country": "Country",
+            "categories": "Categories"
+        }
+    }
+}
